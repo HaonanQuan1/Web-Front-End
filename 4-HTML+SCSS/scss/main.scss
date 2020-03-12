@@ -1,0 +1,580 @@
+@import "variables.scss";
+@import "mixin.scss";
+@import "body.scss";
+
+// this is the main page of scss file
+header{
+    width: $length;
+    div{
+        width: $length;
+    }
+}
+// give all p element selection
+p::selection{
+    color: white;
+    background-color: blue;
+}
+// make nav sticky and give hover to its link
+.nav{
+    @include fancy-links;
+    text-align: right;
+    position: sticky;
+    position: -webkit-sticky;
+    background-color:transparent;
+    z-index: 999;
+    top:20px;
+    a{
+        color: $link-color;
+        &:hover{
+            color: darken($link-color, 80%);
+        }
+    }
+}
+// define content's height
+.content{
+    height: 5600px;
+    // border: 1px solid $black-color;
+}
+
+// define the first part
+.first{
+    padding: 2*100px 2*50px 200px 2*50px;
+    h1{
+        font-size: 60px
+    }
+    h2{
+        font-size: 40px;
+    }
+    p{
+        font-style: $text-font;
+        font-style: italic;
+        color: grey;
+    }
+    button{
+        @include normal-button(15px);
+        color: $black-color;
+        height: 30px;
+        width:150px;
+    }
+}
+// define the second part
+.second{
+    padding: 50px 50px 50px 50px;
+    img{
+        position: relative;
+        left: 200px;
+        height: 340px;
+        width: 400px;
+    }
+    .text2{
+        width: 300px;
+        position: absolute;
+        left: 700px;
+        top:795px;
+        h2{
+            color: $green-color;
+        }
+        button{
+            @include normal-button(5px);
+            height: 50px;
+            width: 150px;
+        }
+    }
+// define the rounded white shadow circle
+    .shadow_circle {
+        @include shadow;
+        position: relative;
+        margin-top: 70px;
+        margin-left: 50px;
+        .progress_circle3{
+            @include circle;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -82px;
+            margin-top: -82px;
+        }
+    
+        .progress_circle1{
+            @extend .progress_circle3;
+            border-right: 7px solid $green-color;
+        }
+    
+        .progress_circle2{
+            @extend .progress_circle1;
+            border-bottom: 7px solid $green-color;
+        }
+
+        .progress_circle4{
+            @extend .progress_circle1;
+        }
+// define the text in the shadow circle
+        .text_circle {
+            width: 148px; /* text_circle 的 size + border 的长度应该等于 progress_circle 的 size */
+            height: 148px;
+            border: 2px solid #a7ffeb;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .text {
+            position: absolute;
+            margin: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        .number {
+            font-family: 'Patua One', cursive;
+            font-size: 40px;
+        }
+        
+        .title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+        }
+    }
+
+ 
+}
+
+// the third part of the page
+.third{
+    // padding: 100px 10px 10px 10px;
+    margin-top: 200px;
+    // define the font of progress element
+    progress{
+        background-color:#d7d7d7;
+        height: 5px;
+        width: 400px;
+        border: none;
+    }
+    progress::-webkit-progress-bar{
+        background-color:#d7d7d7;
+    }
+    progress::-webkit-progress-value{
+        background-color:$green-color;
+    }
+    .head{
+        h2{
+            @include top-text;
+        }
+        h1{
+            @include sub-top-text;
+        }
+    }
+    .progress1{
+        @include shadow-block(white,300px,400px,$shadow1);
+        margin-left: 100px;
+        button{
+            width: 100px;
+            height: 30px;
+            background-color: $green-color;
+            color: white;
+            border: none;
+            position: relative;
+            left:10px;
+            top:50px;
+        }
+        border-radius: 5px;
+    }
+    .progress2{
+        @include shadow-block(white,500px,200px,$shadow1);
+        position: relative;
+        bottom: 310px;
+        left:700px;
+        border-radius:5px;
+        // right: 500px;
+    }
+
+    .progress3{
+        @include shadow-block(white,450px,200px,$shadow1);
+        position: relative;
+        bottom: 170px;
+        left: 100px;
+        border-radius: 5px;
+    }
+
+    .seconddiv{
+        @include shadow-block($green-color,350px,400px,$shadow1);
+        img{
+            height:100px;
+            width: 100px;
+        }
+        color: white;
+        button{
+            // @include normal-button(0px);
+            background-color: white;
+            color: $black-color;
+            height: 40px;
+            width:120px;
+            border: none;
+            position: relative;
+            top:10px;
+            left: 10px;
+        }
+        position: relative;
+        bottom: 500px;
+        left:850px;
+        border-radius: 5px;
+    }
+
+    .progress5{
+        @include shadow-block(white,350px,400px,$shadow1);
+        padding: 10px 10px 10px 10px;
+        position: relative;
+        bottom: 500px;
+        left: 80px;
+        border-radius: 5px;
+        button{
+            left:10px;
+            top:50px;
+        }
+    }
+
+    .progress6{
+        @include shadow-block(white,500px,250px,$shadow1);
+        border-radius: 5px;
+        position: relative;
+        bottom: 850px;
+        left: 600px;
+    }
+    button{
+        @include normal-button(5px);
+        height: 40px;
+        width: 130px;
+        position: relative;
+        bottom: 700px;
+        left: 550px;
+        border: none;
+        
+    }
+
+}
+// define the forth part of the page
+.forth{
+    position: relative;
+    bottom: 700px;
+    .head{
+        h2{
+            @include top-text;
+        }
+        h1{
+            @include sub-top-text;
+        }
+        button{
+            @include normal-button(7px);
+            position: relative;
+            bottom: 170px;
+            left: 550px;
+            width: 130px;
+            height: 40px;
+        }
+    }
+    // grid layout to put the pictures
+    .grid{
+         // border: 1px solid $green-color;
+        display: grid;
+        grid-template-columns: repeat(3,1fr); /* 1fr 1fr 1fr */
+        grid-template-rows: minmax(75px,300px);
+        grid-gap: 10px;
+        height: 500px;
+        width: 1000px;
+        /* align-content: center; //content where it start
+        justify-content: center; */ 
+        /* background-color: black; */
+        overflow: visible;
+        .img{
+            width:300px;
+            height: 300px;
+        }
+    // for loop id used to define the picture div 
+        @for $var from 1 to 5 {
+            .imgdiv#{$var}{
+                grid-column: $var;
+                grid-row: 1;
+                position: relative;
+                float: left;
+                // margin-left: 40px;
+                width: 300px;
+                height: 354px;
+            }
+        }
+        // this is the mask when you put your mouse on the pic
+        .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 300px;
+            background: rgba(4, 255, 159, 0.548);
+            color: #ffffff;
+            opacity: 0;
+        }
+        .mask h3 {
+            text-align: center;
+        }
+        // give the mask animation when you put your mouse on pic
+         a:hover .mask {
+            opacity: 1;           
+        }
+        .mask button{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+            left: 120px;
+            top: 70px;
+        }
+    }
+
+    // define the paragraph part of forth part
+    .paragraph{
+        h2{
+            @include top-text;
+        }
+        h1{
+            @include sub-top-text;
+        }
+        // define the pause picture
+        .pause{
+                width: 50px;
+                height: 30px;
+                padding: 0px 0px 0px 600px;
+        }
+        .text{
+            padding: 0px 300px 0px 300px;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+        // use for loop to define the rounded pic area
+        @for $i from 1 to 4 {
+            .pic#{$i}{
+                // position: relative;
+                border-radius: 50%;
+                margin-left: -7px;
+                float: left;
+                @if $i==1{
+                    margin-left: 530px;
+                }
+                @if $i==2 {
+                   border: $green-color 2px solid;
+                   height: 70px;
+                   width: 70px;
+                }@else{
+                    height: 50px;
+                    width: 50px;
+                }  
+            }
+        }
+    }
+
+    // define BLOG part
+    .BLOG{
+        margin-top: 100px;
+        img {
+            width: 300px;
+            height: 250px;
+            border-radius: 15px;
+            
+        }
+        .firstpart{
+            width: 320px;
+            float: left;
+            margin-left: 80px;
+            h2{
+                color: $green-color;
+            }
+            .textp{
+                position: relative;
+                bottom: 15px;
+                @include shadow-block(white,270px,250px,20px 20px 20px 20px whitesmoke);
+                @include rounded(10px);
+                button{
+                    // @include normal-button(5px);
+                    @include rounded(5px);
+                    background-color: white;
+                    color: $green-color;
+                    border: none;
+                }
+            }
+        }
+
+    }
+    .normalbutton{
+        position: relative;
+        left:600px ;
+        @include normal-button(5px);
+        height: 30px;
+        width:100px;
+     }
+}
+
+// this is the form area which is grid layout
+.form{
+    // margin-top: 30px;
+    position: relative;
+    bottom: 600px;
+    h2{
+        @include top-text;
+    }
+    h1{
+        @include sub-top-text;
+    }
+    .formgrid{
+        display: grid;
+        padding: 50px 100px 50px 100px;
+        grid-template-columns: repeat(4,1fr); /* 1fr 1fr 1fr */
+        grid-template-columns: minmax(400px,auto);
+        grid-template-rows: minmax(40px,auto);
+        grid-gap: 3px;
+        height: 500px;
+        width: 1000px;
+        /* align-content: center; //content where it start
+        justify-content: center; */ 
+        /* background-color: black; */
+        overflow: visible;
+    }
+    // define the input of form
+    .name{
+        height: 50px;
+        grid-column: 1/2;
+        grid-row: 1;
+        input{
+            @include rounded(5px);
+            border: 1px solid $black-color;
+            height: 40px;
+            width: 450px;
+        }
+    }
+    .email{
+        height: 50px;
+        grid-column: 3/4;
+        grid-row: 1;
+        input{
+            @include rounded(5px);
+            border: 1px solid $black-color;
+            height: 40px;
+            width: 450px;
+        }
+    }
+    .tel{
+        position: relative;
+        bottom: 70px;
+        height: 50px;
+        grid-column: 1/2;
+        grid-row: 2;
+        input{
+            @include rounded(5px);
+            border: 1px solid $black-color;
+            height: 40px;
+            width: 450px;
+        }
+    }
+    .budget{
+        height: 50px;
+        position: relative;
+        bottom: 70px;
+        grid-column: 3/4;
+        grid-row: 2;
+        select{
+            @include rounded(5px);
+            border: 1px solid $black-color;
+            height: 40px;
+            width: 455px;
+        }
+    }
+    
+    .message{
+        grid-column: 1/4;
+        grid-row: 3;
+        position: relative;
+        bottom: 130px;
+        input{
+            @include rounded(5px);
+            border: 1px solid $black-color;
+            width: 1010px;
+            height: 100px;
+        }
+    }
+    button{
+        position: relative;
+        top: 250px;
+        left: 30px;
+        height: 50px;
+        width: 150px;
+        @include normal-button(5px);
+    }
+}
+
+// define the button on the right bottom which is used to go back to the top
+.bottombutton{
+    position: sticky;
+    left: 1300px;
+    right: 0px;
+    bottom: 5px;
+    border-radius: 50%;
+    height: 50px;
+    width:50px;
+    background-color: transparent;
+    border: none;
+    img{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+    }
+}
+// define the footer
+footer{
+    .p1{
+        padding: 0px 0px 0px 900px;
+        font-style: normal;
+    }
+    // @for $i from 1 to 4 {
+    //     .color#{$i}{
+    //         color: $green-color;
+    //         position: relative;
+    //         left: 800px;
+    //     }
+    // }
+    .color1{
+        color: $green-color;
+        position: relative;
+        left: 700px;
+    }
+    .color2{
+        color: $green-color;
+        position: relative;
+        left: 900px;
+        bottom: 40px;
+    }
+    .color3{
+        color: $green-color;
+        position: relative;
+        left: 1100px;
+        bottom:80px;
+    }
+    .p2{
+        text-align: center;
+    }
+    .ad1{
+        position: relative;
+        left: 700px;
+    }
+    .ad2{
+        position: relative;
+        left: 900px;
+        bottom: 20px;
+    }
+    .ad3{
+        position: relative;
+        left: 1100px;
+        bottom:40px;
+    }
+}

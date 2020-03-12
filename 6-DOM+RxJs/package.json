@@ -1,0 +1,36 @@
+{
+  "name": "assignment6",
+  "version": "1.0.0",
+  "description": "This is the sixth assignment, the goal is to use Rxjs to build a application like google sheet.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-spring-2020/assignment-6-HaonanQuan1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2020/assignment-6-HaonanQuan1/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2020/assignment-6-HaonanQuan1#readme",
+  "dependencies": {
+    "clean-webpack-plugin": "1.0.1",
+    "css-loader": "2.1.0",
+    "extract-text-webpack-plugin": "3.0.2",
+    "html-webpack-plugin": "3.2.0",
+    "html-withimg-loader": "^0.1.16",
+    "json-loader": "0.5.7",
+    "mini-css-extract-plugin": "0.5.0",
+    "rxjs": "6.5.2",
+    "rxjs-compat": "^6.5.4",
+    "style-loader": "0.19.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.29.0",
+    "webpack-cli": "3.2.1",
+    "webpack-dev-server": "3.1.14"
+  }
+}

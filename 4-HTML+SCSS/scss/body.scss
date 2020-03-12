@@ -1,0 +1,10 @@
+@import "variables.scss";
+@import "mixin.scss";
+// define the background-image and height and width
+body{
+    width: $length;
+    background-image: url(/image/back.png);
+    @include fancy-links;
+    height: 5900px;
+    padding: 0px 0px 0px 40px;
+}

@@ -1,0 +1,24 @@
+{
+  "name": "assignment-4-haonanquan1",
+  "version": "1.0.0",
+  "description": "**Description:**",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss/main.scss css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-spring-2020/assignment-4-HaonanQuan1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2020/assignment-4-HaonanQuan1/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2020/assignment-4-HaonanQuan1#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1",
+    "rxjs": "^6.5.4"
+  }
+}
