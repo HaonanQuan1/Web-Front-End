@@ -1,0 +1,24 @@
+{
+  "name": "assignment7",
+  "version": "1.0.0",
+  "description": "assignment-7-HaonanQuan1",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/neu-mis-info6150-spring-2020/assignment-7-HaonanQuan1.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/neu-mis-info6150-spring-2020/assignment-7-HaonanQuan1/issues"
+  },
+  "homepage": "https://github.com/neu-mis-info6150-spring-2020/assignment-7-HaonanQuan1#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.9.4"
+  }
+}

@@ -1,0 +1,8 @@
+<form [formGroup]="todo" (ngSubmit)="onSubmit()">
+  <br><span>title:</span> <input type='text' formControlName='title'>
+  <br><span>description:</span> <input type='text' formControlName='description'>
+  <br><span>due:</span> <input type='text' formControlName='due'>
+  <!-- <br><span></span> -->
+  <!-- <input type='text' formControlName='createdDate' value=> -->
+  <br><button type="submit" [disabled]="!todo.valid">Submit</button>
+  </form>

@@ -1,0 +1,30 @@
+<div class="todo-item">
+  <div class="title">
+    <span>title:</span>
+    <div contenteditable="true" class="edit" id="title"><span>{{todos.title}}</span></div>
+  </div>
+  <div class="due">
+    <span>due:</span>
+    <div contenteditable="true" class="edit" id="due"><span>{{todos.due}}</span></div>
+  </div>
+  <div class="description">
+    <span>description:</span>
+    <div contenteditable="true" class="edit" id="description"><span>{{todos.description}}</span></div>
+  </div>
+  <div class="createdate">
+    <span>createdate:</span>
+    <div contenteditable="false" class="edit" id="createdate"><span>{{todos.createdDate}}</span></div>
+  </div>
+  <div class="modifieddate">
+    <span>modifieddate:</span>
+    <div contenteditable="false" class="edit" id="modifieddate"><span>{{todos.modifiedDate}}</span></div>
+  </div>
+  <div class="complete">
+    <span>complete:</span>
+    <div contenteditable="true" class="edit" id="complete"><span>{{todos.complete}}</span></div>
+  </div>
+  <div class="control">
+    <button (click)="update()">save</button>
+    <button (click)="delete()">delete</button>
+</div>
+</div>

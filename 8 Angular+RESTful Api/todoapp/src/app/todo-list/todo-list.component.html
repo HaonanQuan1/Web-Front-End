@@ -1,0 +1,22 @@
+<table>
+<thead>
+<th>title</th>
+<th>description</th>
+<th>due</th>
+<th>createdate</th>
+<th>modifieddate</th>
+<th>complete</th>
+</thead>
+<tbody>
+  <tr class="todo-item" *ngFor="let todo of todos ">
+    <td class="title">{{todo.title}}</td>
+    <td class="description">{{todo.description}}</td>
+    <td class="due">{{todo.due}}</td>
+    <td class="createdate">{{todo.createdDate}}</td>
+    <td class="modifieddate">{{todo.modifiedDate}}</td>
+    <td class="complete">{{todo.complete}}</td>
+    <td class="readmore"><a href={{todo.id}}>readmore</a></td>
+</tr>
+</tbody>
+
+</table>
