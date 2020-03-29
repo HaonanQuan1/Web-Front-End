@@ -36,8 +36,10 @@ Node.js, MongoDB, PostMan or Browser
 
 1.Open terminal
 
-2.Type node server.js
+2.Type npm install
 
-3.Open Postman
+3.Type node server.js
 
-4.Test API
+4.Open Postman
+
+5.Test API
