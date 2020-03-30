@@ -8,7 +8,7 @@ export interface todoList{
   // complete: String;
   title: String;
   description: String;
-  due: String;
+  due: Date;
   createdDate: Date;
   modifiedDate: Date;
   complete: String;

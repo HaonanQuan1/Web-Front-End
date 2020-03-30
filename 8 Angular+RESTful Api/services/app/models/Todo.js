@@ -15,7 +15,7 @@ let TodoSchema = new Schema({
         required:"title is required"
     },
     due:{
-        type:String,
+        type:Date,
         // required:"description is required"
     },
     description:{

@@ -12,7 +12,7 @@ export class DetailsComponent implements OnInit {
   url:String;
   todos:todoList={
     title:"",
-    due:"",
+    due:null,
     description:"",
     modifiedDate:new Date(),
     createdDate:new Date(),
@@ -31,7 +31,7 @@ export class DetailsComponent implements OnInit {
   }
   update(){
     this.todos.title = document.getElementById("title").textContent;
-    this.todos.due = document.getElementById("due").textContent;
+    this.todos.due = new Date(document.getElementById("due").textContent);
     this.todos.description = document.getElementById("description").textContent;
     // this.todos.createdDate = document.getElementById("createdate").textContent;
     // this.todos.complete = document.getElementById("complete").textContent;
