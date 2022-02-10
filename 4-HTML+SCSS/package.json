@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/neu-mis-info6150-spring-2020/assignment-4-HaonanQuan1#readme",
   "dependencies": {
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "rxjs": "^6.5.4"
   }
 }
