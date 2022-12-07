@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/neu-mis-info6150-spring-2020/assignment-7-HaonanQuan1#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "mongoose": "^5.9.4"
   }
 }
